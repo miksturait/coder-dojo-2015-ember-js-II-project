@@ -6,6 +6,5 @@ export default Factory.extend({
   },
   createdAt() {
     return new Date((Date.now() - Math.round(Math.random() * 10000000)))
-  },
-  userId: null
+  }
 });
