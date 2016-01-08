@@ -1,6 +1,6 @@
 <img class="avatar" src="/images/avatar.jpg"/>
 <div class="info">
-  {{link-to "cs3b" "user"}}
-    <time>5 mintues ago</time>
-    <p>Hello World!</p>
+  {{link-to chirp.user.username 'user'}}
+    <time>{{chirp.createdAt}}</time>
+    <p>{{chirp.text}}</p>
 </div>

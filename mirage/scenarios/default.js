@@ -6,6 +6,6 @@ export default function(server) {
   */
 
   let users = server.createList('user', 2);
-  users.forEach((user) => server.createList('chirp', 5, {user_id: user.id}))
+  users.forEach((user) => server.createList('chirp', 5, {userId: user.id}))
 
 }
