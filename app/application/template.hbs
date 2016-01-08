@@ -2,11 +2,11 @@
     <div class="page-container">
         <div class="logo"></div>
         <nav>
-            <a>Home</a>
-            <a>
+            {{link-to "Home" "home"}}
+            {{#link-to "user"}}
                 <img class="avatar" src="/images/avatar.jpg" />
                 cs3b
-            </a>
+            {{/link-to}}
             <button class="chirp">Chirp</button>
         </nav>
     </div>
