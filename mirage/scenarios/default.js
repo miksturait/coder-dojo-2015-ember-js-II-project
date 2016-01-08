@@ -5,5 +5,7 @@ export default function(server) {
     This data will not be loaded in your tests.
   */
 
-  server.createList('user', 10);
+  let users = server.createList('user', 2);
+  users.forEach((user) => server.createList('chirp', 5, {user_id: user.id}))
+
 }

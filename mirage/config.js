@@ -16,4 +16,6 @@ export default function() {
 
   this.get('users/:id');
   this.get('users');
+  this.get('chirps');
+  this.get('chirps/:id');
 }
