@@ -2,6 +2,6 @@ import { Model, hasMany } from 'ember-cli-mirage';
 
 export default Model.extend({
   chirps: hasMany(),
-  followees: hasMany('user')
-  //followers: hasMany('user')
+  followees: hasMany('user', {foreignKey: 'followeesId'}),
+  followers: hasMany('user', {foreignKey: 'followersId'})
 });

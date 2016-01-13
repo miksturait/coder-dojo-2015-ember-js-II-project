@@ -9,6 +9,13 @@ export default DS.Model.extend({
   joinedAt: DS.attr('date'),
 
   chirps: DS.hasMany('chirps'),
+  followees: DS.hasMany('user', {
+    inverse: 'followers'
+  }),
+  followers: DS.hasMany('user', {
+    inverse: 'followees'
+  }),
+
   numberOfChirps: Ember.computed('chirps', function() {
     return this.get('chirps').get('length')
   })
