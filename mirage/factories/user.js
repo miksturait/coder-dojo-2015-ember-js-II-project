@@ -1,19 +1,22 @@
-import Mirage/*, {faker} */ from 'ember-cli-mirage';
+import {Factory, faker} from 'ember-cli-mirage';
 
-export default Mirage.Factory.extend({
+export default Factory.extend({
   id(i) {
     return i + 1
   },
   username(i) {
     return `R2D${i}`
   },
-  numberOfChirps(i) {
-    return Math.round((Math.random() * 100))
-  },
   numberOfFollowing(i) {
-    return Math.round((Math.random() * 100))
+    return faker.random.number()
   },
   numberOfFollowers(i) {
-    return Math.round((Math.random() * 100))
+    return faker.random.number()
+  },
+  aboutMe(i) {
+    return faker.lorem.sentences(4)
+  },
+  joinedAt(i) {
+    return faker.date.past()
   }
 });
