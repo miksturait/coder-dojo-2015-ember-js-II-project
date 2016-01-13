@@ -1,2 +1,7 @@
 <h2>Followers</h2>
+
+{{#each model as |user|}}
+  {{profile-glance user=user}}
+{{/each}}
+
 {{outlet}}

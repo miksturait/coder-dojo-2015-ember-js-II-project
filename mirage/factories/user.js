@@ -7,12 +7,6 @@ export default Factory.extend({
   username(i) {
     return `R2D${i}`
   },
-  numberOfFollowing(i) {
-    return faker.random.number()
-  },
-  numberOfFollowers(i) {
-    return faker.random.number()
-  },
   aboutMe(i) {
     return faker.lorem.sentences(4)
   },

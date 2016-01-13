@@ -6,9 +6,11 @@ export default function (server) {
    */
 
   let users = [
-    server.create('user', {followeesIds: []}),
-    server.create('user', {followeesIds: [1]}),
-    server.create('user', {followeesIds: [1, 2], followersIds: [2]})
+    server.create('user'),
+    server.create('user'),
+    server.create('user', {followersIds: [1]}),
+    server.create('user', {followersIds: [1]}),
+    server.create('user', {followersIds: [4,3,2,1], followeesIds: [2,1]})
   ];
   users.forEach((user) => server.createList('chirp', 5, {userId: user.id}));
 
