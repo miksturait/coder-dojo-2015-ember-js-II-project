@@ -1,0 +1,3 @@
+[submodule "lib/ember-cli-mirage"]
+	path = lib/ember-cli-mirage
+	url = git@github.com:cs3b/ember-cli-mirage.git
