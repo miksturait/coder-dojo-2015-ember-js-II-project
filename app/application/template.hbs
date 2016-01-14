@@ -7,11 +7,16 @@
                 <img class="avatar" src="/images/avatar.jpg" />
                 cs3b
             {{/link-to}}
-            <button class="chirp">Chirp</button>
+            <button class="chirp" {{action 'toggleComposeModal'}}>Chirp</button>
         </nav>
     </div>
 </header>
 
+{{#if showingComposeModal}}
+  {{#modal-dialog translucentOverlay=true close=(action 'toggleComposeModal')}}
+    {{compose-modal dismiss=(action 'toggleComposeModal')}}
+  {{/modal-dialog}}
+{{/if}}
 
 {{liquid-outlet}}
 

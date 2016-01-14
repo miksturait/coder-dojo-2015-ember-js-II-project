@@ -4,5 +4,10 @@
 @import "profile";
 @import "index";
 
+
 // components styles - keep it the the end
 @import "pod-styles";
+
+// addons
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
