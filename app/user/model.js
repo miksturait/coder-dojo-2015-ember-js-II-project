@@ -1,27 +1,30 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
+
 import Ember from 'ember';
 
-export default DS.Model.extend({
-  username: DS.attr('string'),
-  aboutMe: DS.attr('string'),
-  joinedAt: DS.attr('date'),
+export default Model.extend({
+  username: attr('string'),
+  aboutMe: attr('string'),
+  joinedAt: attr('date'),
 
-  chirps: DS.hasMany('chirps'),
+  chirps: hasMany('chirps'),
 
-  followees: DS.hasMany('user', {
+  followees: hasMany('user', {
     inverse: 'followers'
   }),
-  followers: DS.hasMany('user', {
+  followers: hasMany('user', {
     inverse: 'followees'
   }),
 
-  numberOfChirps: Ember.computed('chirps', function() {
-    return this.get('chirps').get('length')
+  numberOfChirps: Ember.computed('chirps', function () {
+    return this.get('chirps').get('length');
   }),
-  numberOfFollowing: Ember.computed('followees', function(){
-    return this.get('followees').get('length')
+  numberOfFollowing: Ember.computed('followees', function () {
+    return this.get('followees').get('length');
   }),
-  numberOfFollowers:  Ember.computed('followers', function(){
-    return this.get('followers').get('length')
+  numberOfFollowers: Ember.computed('followers', function () {
+    return this.get('followers').get('length');
   })
 });
