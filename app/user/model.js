@@ -7,7 +7,7 @@ import Ember from 'ember';
 export default Model.extend({
   username: attr('string'),
   aboutMe: attr('string'),
-  joinedAt: attr('date'),
+  //joinedAt: attr('date'),
 
   chirps: hasMany('chirps'),
 

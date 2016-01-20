@@ -1,5 +1,6 @@
-import JsonApiSerializer from 'ember-cli-mirage/serializers/json-api-serializer';
+import { JSONAPISerializer } from 'ember-cli-mirage';
 
-export default JsonApiSerializer.extend({
-  relationships: ['chirps', 'followees', 'followers']
+export default JSONAPISerializer.extend({
+  relationships: ['chirps', 'followees', 'followers'],
+  includes: ['users']
 });

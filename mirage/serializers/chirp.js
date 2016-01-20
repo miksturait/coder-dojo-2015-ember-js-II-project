@@ -1,5 +1,5 @@
-import JsonApiSerializer from 'ember-cli-mirage/serializers/json-api-serializer';
+import { JSONAPISerializer } from 'ember-cli-mirage';
 
-export default JsonApiSerializer.extend({
+export default JSONAPISerializer.extend({
   relationships: ['user']
 });
