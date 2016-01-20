@@ -16,8 +16,5 @@
 npm-debug.log
 testem.log
 
-# fast-boot
-/fastboot-dist
-
 # jetbrains apps
 .idea
